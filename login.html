@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style type="text/css">
+        .textcolor {
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+        
+        #right {
+            text-align: center;
+            width: 25%;
+            height: 37.533512064343164vh;
+            margin-top: 2.680965147453083vh;
+        }
+        
+        .center {
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: blueviolet;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+        
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .container p {
+            margin-bottom: 20px;
+        }
+        
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .container input[type="text"],
+        .container input[type="email"],
+        .container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        
+        .container input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .container button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxes">
+        <div class="center">
+            Web Application For Attendance
+        </div>
+        <div class="container">
+            <label>User</label>
+            <input type="text" name="username" placeholder="USN" id="usn" size="50">
+            <label>Date:</label>
+            <input type="date" id="myDate" name="date" required><br>
+            <input type="submit" value="Login" class="textcolor" onclick="submit()">
+        </div>
+    </div>
+    </div>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        function submit() {
+            var a = document.getElementById('usn').value;
+            if (a.length == 0) {
+                window.location.reload();
+                return;
+            }
+            var x = document.getElementById("myDate").required;
+            document.getElementById("demo").innerHTML = x;
+            var b = a.toUpperCase();
+            var str = b.search(/^[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]/);
+            if (str == 0 && x == true) {
+                window.location.href = 'index1.html';
+            } else {
+                document.getElementById("usn").focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNieAttendanceForm</title>
+    <link href="logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+        integrity="sha512-kHUKImNBR9mcwQ1u4RILtsiJmC6u539bgkRapfGrbwXbkPxfapkzAXvdGnrTu3blGNXHPCX0klrlE7zAZhr+jA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .bg-light {
+            background-color: transparent !important;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            min-height: 300px;
+        }
+
+        .carousel-caption {
+            bottom: 220px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 25px;
+        }
+
+        .carousel-caption p {
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .carousel-caption a {
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: rgb(223, 137, 254);
+            font-size: 10px;
+            border-radius: 30px;
+            padding: 10px 30px;
+            display: inline-block;
+
+            color: rgb(43, 4, 69);
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .carousel-caption a:hover {
+            color: rgb(199, 121, 252);
+            background-color: rgb(27, 4, 35);
+        }
+
+        @media only screen and (max-width:767px) {
+            .navbar-nav {
+                text-align: center;
+                color: #000;
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .carousel-caption {
+                bottom: 150px;
+                /* text-align: center; */
+            }
+
+            .carousel-caption h5 {
+                font-size: 17px;
+                /* color: #000; */
+            }
+
+            .carousel-caption p {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
+
+
+        .navbar-nav a {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .navbar-left .navbar-brand {
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-left .navbar-brand:focus,
+        .navbar-left .navbar-brand:hover {
+            color: #fff;
+
+        }
+
+        .navbar-left .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-left .navbar-nav .nav-link:focus,
+        .navbar-left .navbar-nav .nav-link:hover {
+            color: #fff;
+        }
+
+        .w-100 {
+            height: 100vh;
+        }
+
+        .navbar-toggler {
+            padding: 1px 5px;
+            font-size: 18px;
+            line-height: 0.3;
+            background: #fff;
+        }
+
+        .navbar {
+            background-color: #cf2e2e;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function dd1select() {
+            var d = document.getElementById("ddselect");
+            var disp = d.options[d.selectedIndex].text;
+            document.getElementById("txtvalue").value = disp;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="head">
+        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+            <img src="logo.png" alt="Error in image" width="40px" height="40px"
+                style="border-radius: 10px; margin: 10px;">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <h1 class="navbar-brand"><span style="color:white ; font-weight: bold;">Nie-Activities</span></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="placements.html">Placements</a>
+                    </li>
+                    <li class="nav-item active">
+
+                        <a class="nav-link" href="cultural.html">Cultural<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="contact_us.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="features" style="margin-top: 6%;">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>STUDENT ACTIVITIES</h2>
+                <p>A well-rounded individual, ready for the future—that’s what the NIE strives to mould every student
+                    into.
+                    Explore all extracurricular activities at NIE.NIE believes in creating a generation of students who
+                    are not
+                    only academically brilliant but also talented in subjects outside of the classroom. Theatre
+                    workshops,
+                    State-level debate competitions, inter-collegiate cultural festival, talks and seminars, quiz
+                    competitions
+                </p>
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-5">
+                    <img src="cul.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-10">
+                    <h1>Cultural activities</h1>
+                    <p class="fst-italic">
+                        NIE has always believed in balancing both excellence in academics and fine arts to facilitate
+                        holistic
+                        growth. in line with this,the NIE Student's Association organized various activities including
+                        debate
+                        contest, fashion shows. In addition to these activities TexhNIEks, a cultural extravaganza is
+                        organized by
+                        college every year. Students are handpicked to the cultural core committee after testing their
+                        knowledge
+                        and passion for work.
+                    </p>
+                    <p>
+                        The broad objectives of the initiative are as follows:
+                    <ol>
+                        <li>To CELEBRATEthe Unity in Diversity of our Nation and to maintain and strengthen the fabric
+                            of
+                            traditionally existing emotional bonds between the people of our Country;</li>
+                        <li>To PROMOTEthe spirit of national integration through a deep and structured engagement
+                            between all
+                            Indian States and Union Territories through a year-long planned engagement between States;
+                        </li>
+                        <li>To SHOWCASE the rich heritage and culture, customs and traditions of either State for
+                            enabling people
+                            to understand and appreciate the diversity that is India, thus fostering a sense of common
+                            identity</li>
+                        <li>TO ESTABLISHlong-term engagements and</li>
+                        <li>TO CREATEan environment which promotes learning between States by sharing best practices and
+                            experiences.</li>
+                    </ol>
+                    </p>
+                    
+                    <a href="index.php"><button class="button"
+                            style="width:50%;background-color: purple;font-size: larger; margin-left: 5%;">Attendance
+                            Form</button></a>
+                </div>
+            </div>
+            <!-- <div class="row" data-aos="fade-up">
+        <a href="index1.html"><button class="button" style="width:40%;background-color: purple;font-size: larger;">Attendance Form</button></a>
+      </div> -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-5 order-1 order-md-2"  style="margin-top: 1%;">
+                    <img src="cultural.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-7 pt-5 order-2 order-md-1">
+                    <h1 class="text-dark">NIE Culturals</h1>
+                    <p>With its vibrant campus culture, rich with opportunities to complement your academics, NIE is a
+                        hotspot of excitement that helps you develop the best version of yourself by choosing from and
+                        making the most of a delectable spread of extracurricular
+                        activities ranging from sports and culture, to hobby groups and more.</p>
+                    <div class="container-fluid">
+                        <div class="row mt-3 mb-3">
+                            <div class="col-md-12">
+                                <button class="btn btn-outline-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#para1">The tabla maestro</button>
+                                <p class="collapse" id="para1">
+                                    I am a tabla player, and at NIE, I was able to pursue my passion for drums and
+                                    beats. My unique fusion of beatboxing, drums, and tabla was a signature event which
+                                    the crowd with over 3000 people received with great enthusiasm.
+                                    I have also performed at Sangeeth Shatranj, the annual State-level music contest,
+                                    where I won the 1st prize in instrument category. I’m thankful to NIE for nurturing
+                                    my dreams and helping me keep my passion alive. Vijit
+                                    Vasudev, 6th Semester, ME Department
+                                
+                                      
+                                </p>
+                                <button class="btn btn-outline-warning" data-bs-toggle="collapse"
+                                    data-bs-target="#para2">NIE’s own fashionista</button>
+                                <p class="collapse" id="para2">
+                                    I have been active participant of the college fashion show for the past 3 years. It
+                                    has been a great experience and gave me the confidence, style, oomph and recognition
+                                    which has put me in the spotlight. Moulya P, 8th Semester,
+                                    ISE Department
+                                </p>
+                                <button class="btn btn-outline-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#para3">Learning life skills</button>
+                                <p class="collapse" id="para3">
+                                    In association with the college annual fest, we organize a marathon and cyclothon
+                                    through the landmark spots in Mysuru to support a charitable cause. We donate a part
+                                    of the amount raised to the respective charitable trust.
+                                    This is a small initiative from our part to give back to society. Abhijith Boosa,
+                                    8th Semester, ME Department
+                                </p>
+                                <button class="btn btn-outline-warning" data-bs-toggle="collapse"
+                                    data-bs-target="#para4">Keeping up the tradition</button>
+                                <p class="collapse" id="para4">
+                                    I didn’t stumble upon NIE, I chose this college because of my family members who studied here and went on to become extremely successful in their careers and lives. My perception towards academics shifted on the orientation
+                                    day after pondering over the clever question asked by the Principal– ‘Is Engineering a Noun or a Verb?’. One of my favourite places in the college is the NIE library, which I have always loved for its positive vibe.
+                                    This is my go-to place when in need of any information and for those long study hours with friends.
+                                </p>
+                                <button class="btn btn-outline-primary" data-bs-toggle="collapse"
+                                    data-bs-target="#para5">Champions all the way</button>
+                                <p class="collapse" id="para5">
+                                    >Deloitte has been organizing Collegiate Cyber Threat Competition (CCTC) for the past eight years to find the best individuals in the security domain from prestigious colleges across the country. This year students from
+                                    over 52 campuses participated. The competition comprised of three online preliminary knockout rounds and one grand finale held at Deloitte University, Hyderabad. The Aptitude Round included questions frequently asked
+                                    by companies such as problems from quant, reasoning and verbal. 
+                                </p>
+                                <button class="btn btn-outline-warning" data-bs-toggle="collapse"
+                                    data-bs-target="#para6">very move leads to a prosperous future</button>
+                                <p class="collapse" id="para6">
+                                    At the age of four, I was introduced to Chess by my parents. They would casually play Chess with me and my brother, and I quickly developed a passion for this game of strategy. When we showed an aptitude for the game, my
+                                    parents invited the Chess player, Jay Prakash to coach us. All through my childhood, my parents travelled the country, competing in Chess tournaments, sometimes on a weekly basis. Seeing this only served to feed my
+                                    passion for the game. Without the encouragement of my parents and my teachers at NIE, I would not be where I am today.
+                                </p>
+                                <br>
+                                <button class="button" onclick="window.location.href='https://nie.ac.in/student-activities/';">Read
+                        More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+    </section><!-- End Features Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

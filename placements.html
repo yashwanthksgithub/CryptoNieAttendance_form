@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNieAttendanceForm</title>
+    <link href="logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+        integrity="sha512-kHUKImNBR9mcwQ1u4RILtsiJmC6u539bgkRapfGrbwXbkPxfapkzAXvdGnrTu3blGNXHPCX0klrlE7zAZhr+jA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .bg-light {
+            background-color: transparent !important;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            min-height: 300px;
+        }
+
+        .carousel-caption {
+            bottom: 220px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 25px;
+        }
+
+        .carousel-caption p {
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .carousel-caption a {
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: rgb(223, 137, 254);
+            font-size: 10px;
+            border-radius: 30px;
+            padding: 10px 30px;
+            display: inline-block;
+
+            color: rgb(43, 4, 69);
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .carousel-caption a:hover {
+            color: rgb(199, 121, 252);
+            background-color: rgb(27, 4, 35);
+        }
+
+        @media only screen and (max-width:767px) {
+            .navbar-nav {
+                text-align: center;
+                color: #000;
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .carousel-caption {
+                bottom: 150px;
+                /* text-align: center; */
+            }
+
+            .carousel-caption h5 {
+                font-size: 17px;
+                /* color: #000; */
+            }
+
+            .carousel-caption p {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
+
+
+        .navbar-nav a {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .navbar-left .navbar-brand {
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-left .navbar-brand:focus,
+        .navbar-left .navbar-brand:hover {
+            color: #fff;
+
+        }
+
+        .navbar-left .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-left .navbar-nav .nav-link:focus,
+        .navbar-left .navbar-nav .nav-link:hover {
+            color: #fff;
+        }
+
+        .w-100 {
+            height: 100vh;
+        }
+
+        .navbar-toggler {
+            padding: 1px 5px;
+            font-size: 18px;
+            line-height: 0.3;
+            background: #fff;
+        }
+
+        .navbar{
+            background-color: #cf2e2e;
+        }
+        .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button 
+:hover {
+      background-color: #45a049;
+    }
+    </style>
+    <script>
+        function dd1select() {
+            var d = document.getElementById("ddselect");
+            var disp = d.options[d.selectedIndex].text;
+            document.getElementById("txtvalue").value = disp;
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+        <div class="head">
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <img src="logo.png" alt="Error in image" width="40px" height="40px" style="border-radius: 10px; margin: 10px;">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <h1 class="navbar-brand" ><span style="color:white ; font-weight: bold;">Nie-Activities</span></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sports.html">Sports</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="placements.html">Placements<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cultural.html">Cultural</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="contact_us.html">Contact US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<section class="features" style="margin-top: 6%;">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>STUDENT ACTIVITIES</h2>
+        <p>A well-rounded individual, ready for the future—that’s what the NIE strives to mould every student into.
+          Explore all extracurricular activities at NIE.NIE believes in creating a generation of students who are not
+          only academically brilliant but also talented in subjects outside of the classroom. Theatre workshops,
+          State-level debate competitions, inter-collegiate cultural festival, talks and seminars, quiz competitions
+        </p>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5">
+          <img src="teck1.jpg" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-md-7 pt-7">
+          <h1>The Placement & Training department.</h1>
+          
+          <p class="fst-italic">
+            The Placement & Training department of NIE plays a vital role and is becoming a key department of the
+            Institute. From the very beginning the institute lays greater emphasis on Industrial Training and
+            Practical Training for engineering students.<br>Placement Cell interacts with more than 200 reputed
+            organizations for arranging campus interviews for the final year BE/Mtech/MCA/PhD students. We make
+            efforts to organize technical seminars, workshops and corporate expectation sessions.<br>The Training and
+            Placement Department is located in the first floor of the Admin block. The Training and Placement
+            Department has fully furnished seminar hall named as Sarvepalli Radhakrishnan Seminar hall for company
+            presentations, group discussion rooms and conferencing facilities, interview and discussion rooms.
+          </p>
+          <ul>
+            <li><i class="bi bi-check"></i> LADDER POLICY: (ONE JOB POLICY).</li>
+            <li><i class="bi bi-check"></i> Student placed in mass is eligible for Core, Dream and Open
+              Dream.<br>Student placed in core is eligible for Dream and open dream<br>Student placed in dream is
+              eligible for open dream.</li>
+          </ul>
+          <!-- <p>For more placement related information</p>
+          <button class="button" onclick="window.location.href='https://nie.ac.in/placements/';">Read More</button> -->
+          <!-- <div class="row" data-aos="fade-up"> -->
+            <a href="index.php"><button class="button" style="width:50%;background-color: purple;font-size: larger; margin-left: 5%;">Attendance Form</button></a>
+          <!-- </div> -->
+        </div>
+      </div>
+      
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5 order-1 order-md-2"  style="margin-top: 4%;">
+            <img src="placement.jpg" class="img-fluid" alt="">
+          <img src="placement.png" class="img-fluid" alt="" style="margin-top: 5%;">
+        </div>
+        
+        <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h1 class="text-dark">Placement Highlights</h1>
+            <div class="container-fluid">
+                <div class="row mt-3 mb-3">
+                    <div class="col-md-12">
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#para1">Highest Package offered during the 2022-2023 is 48LPA</button>
+                        <p class="collapse" id="para1">
+                            Since the academic year 2022-23 we had the privilege of being visited by 450+ companies including 260+ IT companies and 150+ core companies each year. A total of 3126 students have been placed through campus recruitment in the last five years. We had
+                            the good fortune of being visited by core companies specific to each domain such as Applied Materials, SABRE, ABB LTD., Mercedes Benz and LARSEN & TOUBRO LTD for Mechanical and Industrial & Production, BROADCOM & NATIONAL INSTRUMENTS
+                            for Electrical & Electronics and Electronics & Communication, TCS, WIPRO for Computer Science and also by many dream companies to name a few, such as CISCO, VMWARE, INTUIT, IBM, AMAZON, TWILIO, GOOGLE, SAP LABS and MICROSOFT. Every
+                            year the placement cell plans the training activities related to placement and overall personality development.
+                        </p>
+                        <button class="btn btn-outline-warning" data-bs-toggle="collapse" data-bs-target="#para2">About US</button>
+                        <p class="collapse" id="para2">
+                            The Placement & Training department of NIE plays a vital role and is becoming a key department of the Institute. From the very beginning the institute lays greater emphasis on Industrial Training and Practical Training for engineering students. NIE is
+                            one among the first engineering college to establish the Training and Placement Department. Employment of the students of the college is our major concern. The Placement Cell serves to merely bridge the gap between a job-aspirant and
+                            a prospective employer. Placement Cell interacts with more than 200 reputed organizations for arranging campus interviews for the final year BE/Mtech/MCA/PhD students. We make efforts to organize technical seminars, workshops and corporate
+                            expectation sessions. Industry personnel are invited periodically to enrich the knowledge of our student community with the latest technological innovations and industry practices. We produce graduates who are well equipped to handle
+                            the working norms of the industry. The Training and Placement Department is located in the first floor of the Admin block. The Training and Placement Department has fully furnished seminar hall named as Sarvepalli Radhakrishnan Seminar
+                            hall for company presentations, group discussion rooms and conferencing facilities, interview and discussion rooms.
+                            
+                        </p>
+                        <button class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#para3">Placement Policy</button>
+                        <ul class="collapse" id="para3">
+                            <li>Mass: Companies which recruits students with generic skill sets with generic hiring process.</li>
+                            <li>Core: Companies which recruits for branch and skill specific recruitments</li>
+                            <li>Dream: Product based companies or which comes under top 500 Fortune Companies or companies which offer salary more than 8 LPA.</li>
+                            <li>Open Dream: Companies which offer salary more than 20 LPA</li>
+                        </ul>
+                        <button class="btn btn-outline-warning" data-bs-toggle="collapse" data-bs-target="#para7">Highlights</button>
+                        <!-- <div class="col-md-5" class="collapse" id="para7">
+                            <img src="highlights.jpg" class="img-fluid" alt="">
+                          </div> -->
+                        <p class="collapse" id="para7">
+                            <img src="highlights.jpeg" alt="highlight image">
+                            <!-- <img src="highlights.jpg" class="img-fluid" alt=""> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>For more placement related information</p>
+            <button class="button"  onclick="window.location.href='https://nie.ac.in/placements/';">Read More</button>
+          
+        </div>
+      </div>
+
+      
+    </div>
+</section><!-- End Features Section -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    
+
+
+        
+</body>
+
+</html>
